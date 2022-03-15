@@ -375,11 +375,11 @@ var app = (function () {
     			t3 = space();
     			li2 = element("li");
     			li2.textContent = "English";
-    			attr_dev(li0, "class", "svelte-sg697c");
+    			attr_dev(li0, "class", "svelte-1yg3rw9");
     			add_location(li0, file, 30, 5, 409);
-    			attr_dev(li1, "class", "svelte-sg697c");
+    			attr_dev(li1, "class", "svelte-1yg3rw9");
     			add_location(li1, file, 33, 5, 447);
-    			attr_dev(li2, "class", "svelte-sg697c");
+    			attr_dev(li2, "class", "svelte-1yg3rw9");
     			add_location(li2, file, 36, 5, 483);
     		},
     		m: function mount(target, anchor) {
@@ -437,11 +437,11 @@ var app = (function () {
     			t3 = space();
     			li2 = element("li");
     			li2.textContent = "Español";
-    			attr_dev(li0, "class", "svelte-sg697c");
+    			attr_dev(li0, "class", "svelte-1yg3rw9");
     			add_location(li0, file, 20, 5, 276);
-    			attr_dev(li1, "class", "svelte-sg697c");
+    			attr_dev(li1, "class", "svelte-1yg3rw9");
     			add_location(li1, file, 23, 5, 308);
-    			attr_dev(li2, "class", "svelte-sg697c");
+    			attr_dev(li2, "class", "svelte-1yg3rw9");
     			add_location(li2, file, 26, 5, 343);
     		},
     		m: function mount(target, anchor) {
@@ -499,11 +499,11 @@ var app = (function () {
     			span2 = element("span");
     			span2.textContent = "anizaciones autónomas decentralizadas";
     			t5 = text(" y finanzas deceentralizadas.");
-    			attr_dev(span0, "class", "highlight-yellow svelte-sg697c");
+    			attr_dev(span0, "class", "highlight-yellow svelte-1yg3rw9");
     			add_location(span0, file, 50, 5, 928);
-    			attr_dev(span1, "class", "highlight-blue svelte-sg697c");
+    			attr_dev(span1, "class", "highlight-blue svelte-1yg3rw9");
     			add_location(span1, file, 50, 99, 1022);
-    			attr_dev(span2, "class", "highlight-red svelte-sg697c");
+    			attr_dev(span2, "class", "highlight-red svelte-1yg3rw9");
     			add_location(span2, file, 50, 164, 1087);
     		},
     		m: function mount(target, anchor) {
@@ -555,11 +555,11 @@ var app = (function () {
     			span2 = element("span");
     			span2.textContent = "entrilized and autonomous organizations";
     			t5 = text(" and decentrilized finance.");
-    			attr_dev(span0, "class", "highlight-yellow svelte-sg697c");
+    			attr_dev(span0, "class", "highlight-yellow svelte-1yg3rw9");
     			add_location(span0, file, 48, 5, 650);
-    			attr_dev(span1, "class", "highlight-blue svelte-sg697c");
+    			attr_dev(span1, "class", "highlight-blue svelte-1yg3rw9");
     			add_location(span1, file, 48, 97, 742);
-    			attr_dev(span2, "class", "highlight-red svelte-sg697c");
+    			attr_dev(span2, "class", "highlight-red svelte-1yg3rw9");
     			add_location(span2, file, 48, 163, 808);
     		},
     		m: function mount(target, anchor) {
@@ -700,21 +700,21 @@ var app = (function () {
     			t17 = space();
     			section3 = element("section");
     			section3.textContent = "Section 4";
-    			attr_dev(li0, "class", "svelte-sg697c");
+    			attr_dev(li0, "class", "svelte-1yg3rw9");
     			add_location(li0, file, 13, 5, 177);
-    			attr_dev(li1, "class", "svelte-sg697c");
+    			attr_dev(li1, "class", "svelte-1yg3rw9");
     			add_location(li1, file, 16, 5, 219);
-    			attr_dev(ul, "class", "svelte-sg697c");
+    			attr_dev(ul, "class", "svelte-1yg3rw9");
     			add_location(ul, file, 12, 4, 167);
-    			attr_dev(nav, "class", "svelte-sg697c");
+    			attr_dev(nav, "class", "svelte-1yg3rw9");
     			add_location(nav, file, 11, 3, 157);
     			add_location(header, file, 10, 2, 145);
-    			attr_dev(p, "class", "svelte-sg697c");
+    			attr_dev(p, "class", "svelte-1yg3rw9");
     			add_location(p, file, 46, 4, 616);
     			add_location(h10, file, 45, 3, 607);
-    			attr_dev(div0, "class", "introduction svelte-sg697c");
+    			attr_dev(div0, "class", "introduction svelte-1yg3rw9");
     			add_location(div0, file, 44, 2, 577);
-    			attr_dev(section0, "class", "intro svelte-sg697c");
+    			attr_dev(section0, "class", "intro svelte-1yg3rw9");
     			add_location(section0, file, 9, 2, 119);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "x", "50%");
@@ -733,38 +733,38 @@ var app = (function () {
     			add_location(text2, file, 66, 5, 1520);
     			attr_dev(symbol, "id", "s-text");
     			add_location(symbol, file, 63, 4, 1351);
-    			attr_dev(use0, "class", "text svelte-sg697c");
+    			attr_dev(use0, "class", "text svelte-1yg3rw9");
     			xlink_attr(use0, "xlink:href", "#s-text");
     			add_location(use0, file, 69, 4, 1634);
-    			attr_dev(use1, "class", "text svelte-sg697c");
+    			attr_dev(use1, "class", "text svelte-1yg3rw9");
     			xlink_attr(use1, "xlink:href", "#s-text");
     			add_location(use1, file, 71, 4, 1685);
-    			attr_dev(use2, "class", "text svelte-sg697c");
+    			attr_dev(use2, "class", "text svelte-1yg3rw9");
     			xlink_attr(use2, "xlink:href", "#s-text");
     			add_location(use2, file, 73, 4, 1736);
-    			attr_dev(use3, "class", "text svelte-sg697c");
+    			attr_dev(use3, "class", "text svelte-1yg3rw9");
     			xlink_attr(use3, "xlink:href", "#s-text");
     			add_location(use3, file, 75, 4, 1787);
-    			attr_dev(use4, "class", "text svelte-sg697c");
+    			attr_dev(use4, "class", "text svelte-1yg3rw9");
     			xlink_attr(use4, "xlink:href", "#s-text");
     			add_location(use4, file, 76, 4, 1837);
     			attr_dev(svg, "viewBox", "0 0 600 300");
-    			attr_dev(svg, "class", "svelte-sg697c");
+    			attr_dev(svg, "class", "svelte-1yg3rw9");
     			add_location(svg, file, 61, 3, 1300);
-    			attr_dev(div1, "class", "animated-text svelte-sg697c");
+    			attr_dev(div1, "class", "animated-text svelte-1yg3rw9");
     			add_location(div1, file, 60, 2, 1269);
     			add_location(h11, file, 81, 3, 1934);
     			add_location(h12, file, 82, 3, 1966);
     			add_location(h13, file, 83, 3, 1999);
-    			attr_dev(div2, "class", "words-input svelte-sg697c");
+    			attr_dev(div2, "class", "words-input svelte-1yg3rw9");
     			add_location(div2, file, 80, 2, 1905);
-    			attr_dev(section1, "class", "info svelte-sg697c");
+    			attr_dev(section1, "class", "info svelte-1yg3rw9");
     			add_location(section1, file, 58, 2, 1243);
-    			attr_dev(section2, "class", "svelte-sg697c");
+    			attr_dev(section2, "class", "svelte-1yg3rw9");
     			add_location(section2, file, 88, 2, 2054);
-    			attr_dev(section3, "class", "svelte-sg697c");
+    			attr_dev(section3, "class", "svelte-1yg3rw9");
     			add_location(section3, file, 92, 1, 2090);
-    			attr_dev(main, "class", "svelte-sg697c");
+    			attr_dev(main, "class", "svelte-1yg3rw9");
     			add_location(main, file, 8, 0, 110);
     		},
     		l: function claim(nodes) {

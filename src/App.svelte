@@ -1,9 +1,46 @@
 <script>
+	import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
+	import { ethers } from 'ethers';
+
   let lang = { spanish: false };
 
 	function toggle() {
 		lang.spanish = !lang.spanish;
 	}
+
+  const address = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  let greeter = '';
+	let actual;
+	async function requestAccount() {
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+  }
+  async function fetchGreeting() {
+    if (typeof window.ethereum !== 'undefined') {
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      console.log({ provider })
+      const contract = new ethers.Contract(address, Greeter.abi, provider)
+      try {
+        const data = await contract.greet()
+        console.log('data: ', data)
+				actual = data;
+      } catch (err) {
+        console.log("Error: ", err)
+      }
+    }
+  }
+	async function setGreeting() {
+    if (!greeting) return
+    if (typeof window.ethereum !== 'undefined') {
+      await requestAccount()
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      console.log({ provider })
+      const signer = provider.getSigner()
+      const contract = new ethers.Contract(address, Greeter.abi, signer)
+      const transaction = await contract.setGreeting(greeting)
+      await transaction.wait()
+      fetchGreeting()
+    }
+  }
 </script>
 
 <main>
@@ -82,6 +119,13 @@
 			<h1>Put first word here</h1>
 			<h1>Put second word here</h1>
 			<h1>Put thirds word here</h1>
+			<button on:click={fetchGreeting}>Fetch Greeting</button>
+			<button on:click={setGreeting}>Set Greeting</button>
+			<input bind:value={firstWord} placeholder="First Word Here">
+			<input bind:value={secondWord} placeholder="Second Word Here">
+			<input bind:value={thirdWord} placeholder="Third Word Here">
+			<h1>{firstWord}{secondWord}{thirdWord}</h1>
+			<h1>The current phrase on the Blockchain is: "{actual}"</h1>
 		</div>
 
 	</section>
@@ -153,17 +197,17 @@ svg {
   height: 100%;
 }
 .animated-text {
-	height: 35%;
+	height: 50%;
 	width: 50%;
-  font: 3em/1 Open Sans, Impact;
+  font: 4em/1 Open Sans, Impact;
   text-transform: uppercase;
   margin: 0;
 }
 .words-input {
-	height: 35%;
+	height: 50%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 }
 	main {
 		text-align: center;
@@ -177,7 +221,16 @@ svg {
 		display: flex;
 		justify-content: center;
 	}
-
+@media (max-width: 600px) {
+	section {
+		flex-direction: column;
+	}
+	.animated-text {
+		width: 100%;
+		height: 25%;
+		font: 5em/1 Open Sans, Impact;
+	}
+}
 	nav {
 		position: fixed;
     display: flex;
