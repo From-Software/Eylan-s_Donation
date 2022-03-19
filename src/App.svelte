@@ -1,16 +1,23 @@
 <script>
 	import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 	import { ethers } from 'ethers';
+  import { fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
-	// Languange button.
+  // Scroll animation variables //
+	let scroll;
 
+	// Languange button //
 	let lang = { spanish: false };
 	function toggle() {
 		lang.spanish = !lang.spanish;
 	}
+	// First app variables //
 
+	let firstWord = '';
 </script>
 
+<svelte:window bind:scrollY={scroll} />
 <main>
   <section class="intro">
 		<header>
@@ -79,30 +86,32 @@
 				<use class="text" xlink:href="#s-text"></use>
 			</svg>
 		</div>
+		{#if scroll >700}
 
-		<div class="card">
+		<div class="card" transition:fly="{{ y: 200, duration: 2000 }}">
 			<span style="--i:0;"></span>
 			<span style="--i:1;"></span>
 			<span style="--i:2;"></span>
 			<span style="--i:3;"></span>
-			<div class="glass">
-				<h2>bigText Bla bla bla<br><i>+242-324-8484</i></h2>
-			</div>
+		  <div class="glass">
+			  <div class="input-container">
+				  <input class="word-input" bind:value={firstWord} placeholder="Enter first word">
+			  	<input class="word-input" bind:value={firstWord} placeholder="Enter second word">
+			  	<input class="word-input" bind:value={firstWord} placeholder="Enter third word">
+			 </div>
+			<h2>bigText Bla bla bla<br><i>+242-3</i></h2>
+		  </div>
+		</div>
+
+		{/if}
+
 
 	</section>
 
   <section class="card-section">
 
 		<h1>Section 3</h1>
-		<div class="card">
-			<span style="--i:0;"></span>
-			<span style="--i:1;"></span>
-			<span style="--i:2;"></span>
-			<span style="--i:3;"></span>
-			<div class="glass">
-				<h2>bigText Bla bla bla<br><i>+242-324-8484</i></h2>
-			</div>
-		</div>
+
 
 	</section>
 
@@ -176,12 +185,6 @@ svg {
   margin: 0;
 	background: black;
 	border-radius: 5%;
-}
-.words-input {
-	height: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
 }
 	main {
 		height: 100vh;
@@ -284,7 +287,7 @@ p {
 }
 .info {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
 }
 .card-section {
@@ -294,7 +297,8 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
+	position: relative;
+	left: 25%;
 }
 .card span {
 	position: absolute;
@@ -356,5 +360,16 @@ p {
 	font-weight: 300;
 	font-size: 0.75em;
 	font-style: normal;
+}
+.input-container {
+	display: flex;
+	flex-direction: column;
+	align-self: baseline;
+	position: absolute;
+}
+.word-input {
+	position: relative;
+	text-align: center;
+	align-self: center;
 }
 </style>
