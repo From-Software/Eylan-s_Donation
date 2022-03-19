@@ -2,45 +2,13 @@
 	import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json';
 	import { ethers } from 'ethers';
 
-  let lang = { spanish: false };
+	// Languange button.
 
+	let lang = { spanish: false };
 	function toggle() {
 		lang.spanish = !lang.spanish;
 	}
 
-  const address = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
-  let greeter = '';
-	let actual;
-	async function requestAccount() {
-    await window.ethereum.request({ method: 'eth_requestAccounts' });
-  }
-  async function fetchGreeting() {
-    if (typeof window.ethereum !== 'undefined') {
-      const provider = new ethers.providers.Web3Provider(window.ethereum)
-      console.log({ provider })
-      const contract = new ethers.Contract(address, Greeter.abi, provider)
-      try {
-        const data = await contract.greet()
-        console.log('data: ', data)
-				actual = data;
-      } catch (err) {
-        console.log("Error: ", err)
-      }
-    }
-  }
-	async function setGreeting() {
-    if (!greeting) return
-    if (typeof window.ethereum !== 'undefined') {
-      await requestAccount()
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      console.log({ provider })
-      const signer = provider.getSigner()
-      const contract = new ethers.Contract(address, Greeter.abi, signer)
-      const transaction = await contract.setGreeting(greeting)
-      await transaction.wait()
-      fetchGreeting()
-    }
-  }
 </script>
 
 <main>
@@ -83,9 +51,9 @@
 			<h1>
 				<p>
 					{#if !lang.spanish}
-					<span class="highlight-yellow">Itahand Naizir is</span> a software engineer who specializes <span class="highlight-blue">on blockchain development</span>, dec<span class="highlight-red">entrilized and autonomous organizations</span> and decentrilized finance.
+					<span class="highlight-yellow">Itahand Naizir is</span> a software engineer who specializes <span class="highlight-blue">on blockchain development</span>, <span class="highlight-red">decentrilized and autonomous organizations</span> and decentrilized finance.
 					{:else}
-					<span class="highlight-yellow">Itahand Naizir es</span> un ingeniero en sistema especializado <span class="highlight-blue">en tecnología blockchain</span>, org<span class="highlight-red">anizaciones autónomas decentralizadas</span> y finanzas deceentralizadas.
+					<span class="highlight-yellow">Itahand Naizir es</span> un ingeniero en sistema especializado <span class="highlight-blue">en tecnología blockchain</span>, <span class="highlight-red">organizaciones autónomas decentralizadas</span> y finanzas deceentralizadas.
 					{/if}
 
 				</p>
@@ -105,33 +73,37 @@
 				</symbol>
 				<!-- Duplicate symbols-->
 				<use class="text" xlink:href="#s-text"></use>
-
 				<use class="text" xlink:href="#s-text"></use>
-
 				<use class="text" xlink:href="#s-text"></use>
-
 				<use class="text" xlink:href="#s-text"></use>
 				<use class="text" xlink:href="#s-text"></use>
 			</svg>
 		</div>
 
-		<div class="words-input">
-			<h1>Put first word here</h1>
-			<h1>Put second word here</h1>
-			<h1>Put thirds word here</h1>
-			<button on:click={fetchGreeting}>Fetch Greeting</button>
-			<button on:click={setGreeting}>Set Greeting</button>
-			<input bind:value={firstWord} placeholder="First Word Here">
-			<input bind:value={secondWord} placeholder="Second Word Here">
-			<input bind:value={thirdWord} placeholder="Third Word Here">
-			<h1>{firstWord}{secondWord}{thirdWord}</h1>
-			<h1>The current phrase on the Blockchain is: "{actual}"</h1>
-		</div>
+		<div class="card">
+			<span style="--i:0;"></span>
+			<span style="--i:1;"></span>
+			<span style="--i:2;"></span>
+			<span style="--i:3;"></span>
+			<div class="glass">
+				<h2>bigText Bla bla bla<br><i>+242-324-8484</i></h2>
+			</div>
 
 	</section>
 
-  <section>
-		Section 3
+  <section class="card-section">
+
+		<h1>Section 3</h1>
+		<div class="card">
+			<span style="--i:0;"></span>
+			<span style="--i:1;"></span>
+			<span style="--i:2;"></span>
+			<span style="--i:3;"></span>
+			<div class="glass">
+				<h2>bigText Bla bla bla<br><i>+242-324-8484</i></h2>
+			</div>
+		</div>
+
 	</section>
 
 	<section>
@@ -202,6 +174,8 @@ svg {
   font: 4em/1 Open Sans, Impact;
   text-transform: uppercase;
   margin: 0;
+	background: black;
+	border-radius: 5%;
 }
 .words-input {
 	height: 50%;
@@ -210,7 +184,6 @@ svg {
 	justify-content: space-around;
 }
 	main {
-		text-align: center;
 		height: 100vh;
 		width: 100vw;
 		margin: 0;
@@ -276,13 +249,15 @@ svg {
 	.introduction {
 		margin: 1rem 20vw;
 		transition: 0.5s;
+		text-align: center;
 	}
 	.highlight-red {
   border-radius: 1em 0 1em 0;
   background-image: linear-gradient(
     -100deg,
     rgba(255, 20, 0, 0.2),
-    rgba(255, 20, 0, 0.7) 95%,gba(255, 20, 0, 0.1)
+    rgba(255, 20, 0, 0.7) 95%,
+		rgba(255, 20, 0, 0.1)
   );
 }
 .highlight-yellow {
@@ -306,5 +281,80 @@ svg {
 
 p {
   font-size: 30px;
+}
+.info {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.card-section {
+	align-items: center;
+}
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+.card span {
+	position: absolute;
+	top: 0;
+	width: 250px;
+	height: 250px;
+	display: block;
+	background: black;
+	border-radius: 50%;
+	transform-origin: 125px 0;
+	transform: rotate(calc(90deg* var(--i)));
+	filter: blur(85px);
+	opacity: 0.75;
+}
+.card span:nth-child(1) {
+	background: #01b2fe;
+}
+.card span:nth-child(2) {
+	background: #ff008c;
+}
+.card span:nth-child(3) {
+	background: #ffcd00;
+}
+.card span:nth-child(4) {
+	background: #00c456;
+}
+.card .glass {
+	position: absolute;
+	height: 300px;
+	width: 450px;
+	background: rgba(255,255,255,0.5);
+	border-radius: 20px;
+	border: 1px solid wheat;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+.card .glass::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.2);
+	pointer-events: none;
+	transform: skewX(345deg);
+}
+.card .glass h2{
+	padding: 20px;
+	font-weight: 400;
+	width: 100%;
+	background: rgba(255,255,255,0.2);
+	color: #333;
+	text-align: end;
+}
+.card .glass h2 i {
+	font-weight: 300;
+	font-size: 0.75em;
+	font-style: normal;
 }
 </style>
