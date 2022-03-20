@@ -95,11 +95,20 @@
 			<span style="--i:3;"></span>
 		  <div class="glass">
 			  <div class="input-container">
-				  <input class="word-input" bind:value={firstWord} placeholder="Enter first word">
-			  	<input class="word-input" bind:value={firstWord} placeholder="Enter second word">
-			  	<input class="word-input" bind:value={firstWord} placeholder="Enter third word">
+					<div class="form">
+						<input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
+						<label for="email" class="form__label">First Word</label>
+					</div>
+					<div class="form">
+						<input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
+						<label for="email" class="form__label">Second Word</label>
+					</div>
+					<div class="form">
+						<input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
+						<label for="email" class="form__label">Third Word</label>
+					</div>
 			 </div>
-			<h2>bigText Bla bla bla<br><i>+242-3</i></h2>
+			<h2>Set your phrase<br><i>Deploy to smart contract</i></h2>
 		  </div>
 		</div>
 
@@ -112,6 +121,10 @@
 
 		<h1>Section 3</h1>
 
+		<div class="form">
+			<input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
+			<label for="email" class="form__label">First Word</label>
+		</div>
 
 	</section>
 
@@ -183,7 +196,6 @@ svg {
   font: 4em/1 Open Sans, Impact;
   text-transform: uppercase;
   margin: 0;
-	background: black;
 	border-radius: 5%;
 }
 	main {
@@ -366,10 +378,58 @@ p {
 	flex-direction: column;
 	align-self: baseline;
 	position: absolute;
+	margin: 1rem;
 }
-.word-input {
-	position: relative;
+/* Input Styling */
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+  /* Change border when input focus*/
+}
+.form__input:hover {
+  border-color: #adffff;
+}
+.form__input:focus {
+  border-color: #18ffff;
+}
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: black;
+  cursor: text;
 	text-align: center;
-	align-self: center;
+  transition: top 300ms ease-in-out, left 300ms ease-in-out, font-size 300ms ease-in-out;
+	background: none;
+}
+
+/*
+1. When the input is in the focus state
+reduce the size of the label and move upwards
+
+2. Keep label state when content is in input field
+*/
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  font-size: 0.8rem;
+  left: 100%;
+	overflow: visible;
 }
 </style>

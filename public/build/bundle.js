@@ -117,9 +117,6 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
-    function set_input_value(input, value) {
-        input.value = value == null ? '' : value;
-    }
     function set_style(node, key, value, important) {
         if (value === null) {
             node.style.removeProperty(key);
@@ -23950,11 +23947,11 @@ var app = (function () {
     			t3 = space();
     			li2 = element("li");
     			li2.textContent = "English";
-    			attr_dev(li0, "class", "svelte-qp6ncc");
+    			attr_dev(li0, "class", "svelte-jpax2m");
     			add_location(li0, file, 42, 5, 761);
-    			attr_dev(li1, "class", "svelte-qp6ncc");
+    			attr_dev(li1, "class", "svelte-jpax2m");
     			add_location(li1, file, 45, 5, 799);
-    			attr_dev(li2, "class", "svelte-qp6ncc");
+    			attr_dev(li2, "class", "svelte-jpax2m");
     			add_location(li2, file, 48, 5, 835);
     		},
     		m: function mount(target, anchor) {
@@ -23965,7 +23962,7 @@ var app = (function () {
     			insert_dev(target, li2, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(li2, "click", /*toggle*/ ctx[3], false, false, false);
+    				dispose = listen_dev(li2, "click", /*toggle*/ ctx[2], false, false, false);
     				mounted = true;
     			}
     		},
@@ -24012,11 +24009,11 @@ var app = (function () {
     			t3 = space();
     			li2 = element("li");
     			li2.textContent = "Español";
-    			attr_dev(li0, "class", "svelte-qp6ncc");
+    			attr_dev(li0, "class", "svelte-jpax2m");
     			add_location(li0, file, 32, 5, 628);
-    			attr_dev(li1, "class", "svelte-qp6ncc");
+    			attr_dev(li1, "class", "svelte-jpax2m");
     			add_location(li1, file, 35, 5, 660);
-    			attr_dev(li2, "class", "svelte-qp6ncc");
+    			attr_dev(li2, "class", "svelte-jpax2m");
     			add_location(li2, file, 38, 5, 695);
     		},
     		m: function mount(target, anchor) {
@@ -24027,7 +24024,7 @@ var app = (function () {
     			insert_dev(target, li2, anchor);
 
     			if (!mounted) {
-    				dispose = listen_dev(li2, "click", /*toggle*/ ctx[3], false, false, false);
+    				dispose = listen_dev(li2, "click", /*toggle*/ ctx[2], false, false, false);
     				mounted = true;
     			}
     		},
@@ -24074,11 +24071,11 @@ var app = (function () {
     			span2 = element("span");
     			span2.textContent = "organizaciones autónomas decentralizadas";
     			t5 = text(" y finanzas deceentralizadas.");
-    			attr_dev(span0, "class", "highlight-yellow svelte-qp6ncc");
+    			attr_dev(span0, "class", "highlight-yellow svelte-jpax2m");
     			add_location(span0, file, 62, 5, 1280);
-    			attr_dev(span1, "class", "highlight-blue svelte-qp6ncc");
+    			attr_dev(span1, "class", "highlight-blue svelte-jpax2m");
     			add_location(span1, file, 62, 99, 1374);
-    			attr_dev(span2, "class", "highlight-red svelte-qp6ncc");
+    			attr_dev(span2, "class", "highlight-red svelte-jpax2m");
     			add_location(span2, file, 62, 161, 1436);
     		},
     		m: function mount(target, anchor) {
@@ -24130,11 +24127,11 @@ var app = (function () {
     			span2 = element("span");
     			span2.textContent = "decentrilized and autonomous organizations";
     			t5 = text(" and decentrilized finance.");
-    			attr_dev(span0, "class", "highlight-yellow svelte-qp6ncc");
+    			attr_dev(span0, "class", "highlight-yellow svelte-jpax2m");
     			add_location(span0, file, 60, 5, 1002);
-    			attr_dev(span1, "class", "highlight-blue svelte-qp6ncc");
+    			attr_dev(span1, "class", "highlight-blue svelte-jpax2m");
     			add_location(span1, file, 60, 97, 1094);
-    			attr_dev(span2, "class", "highlight-red svelte-qp6ncc");
+    			attr_dev(span2, "class", "highlight-red svelte-jpax2m");
     			add_location(span2, file, 60, 160, 1157);
     		},
     		m: function mount(target, anchor) {
@@ -24168,7 +24165,7 @@ var app = (function () {
 
     // (89:2) {#if scroll >700}
     function create_if_block(ctx) {
-    	let div2;
+    	let div5;
     	let span0;
     	let t0;
     	let span1;
@@ -24177,26 +24174,33 @@ var app = (function () {
     	let t2;
     	let span3;
     	let t3;
-    	let div1;
+    	let div4;
+    	let div3;
     	let div0;
     	let input0;
     	let t4;
-    	let input1;
-    	let t5;
-    	let input2;
+    	let label0;
     	let t6;
-    	let h2;
+    	let div1;
+    	let input1;
     	let t7;
+    	let label1;
+    	let t9;
+    	let div2;
+    	let input2;
+    	let t10;
+    	let label2;
+    	let t12;
+    	let h2;
+    	let t13;
     	let br;
     	let i;
-    	let div2_transition;
+    	let div5_transition;
     	let current;
-    	let mounted;
-    	let dispose;
 
     	const block = {
     		c: function create() {
-    			div2 = element("div");
+    			div5 = element("div");
     			span0 = element("span");
     			t0 = space();
     			span1 = element("span");
@@ -24205,122 +24209,139 @@ var app = (function () {
     			t2 = space();
     			span3 = element("span");
     			t3 = space();
-    			div1 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
     			div0 = element("div");
     			input0 = element("input");
     			t4 = space();
-    			input1 = element("input");
-    			t5 = space();
-    			input2 = element("input");
+    			label0 = element("label");
+    			label0.textContent = "First Word";
     			t6 = space();
+    			div1 = element("div");
+    			input1 = element("input");
+    			t7 = space();
+    			label1 = element("label");
+    			label1.textContent = "Second Word";
+    			t9 = space();
+    			div2 = element("div");
+    			input2 = element("input");
+    			t10 = space();
+    			label2 = element("label");
+    			label2.textContent = "Third Word";
+    			t12 = space();
     			h2 = element("h2");
-    			t7 = text("bigText Bla bla bla");
+    			t13 = text("Set your phrase");
     			br = element("br");
     			i = element("i");
-    			i.textContent = "+242-3";
+    			i.textContent = "Deploy to smart contract";
     			set_style(span0, "--i", "0");
-    			attr_dev(span0, "class", "svelte-qp6ncc");
+    			attr_dev(span0, "class", "svelte-jpax2m");
     			add_location(span0, file, 91, 3, 2342);
     			set_style(span1, "--i", "1");
-    			attr_dev(span1, "class", "svelte-qp6ncc");
+    			attr_dev(span1, "class", "svelte-jpax2m");
     			add_location(span1, file, 92, 3, 2374);
     			set_style(span2, "--i", "2");
-    			attr_dev(span2, "class", "svelte-qp6ncc");
+    			attr_dev(span2, "class", "svelte-jpax2m");
     			add_location(span2, file, 93, 3, 2406);
     			set_style(span3, "--i", "3");
-    			attr_dev(span3, "class", "svelte-qp6ncc");
+    			attr_dev(span3, "class", "svelte-jpax2m");
     			add_location(span3, file, 94, 3, 2438);
-    			attr_dev(input0, "class", "word-input svelte-qp6ncc");
-    			attr_dev(input0, "placeholder", "Enter first word");
-    			add_location(input0, file, 97, 6, 2532);
-    			attr_dev(input1, "class", "word-input svelte-qp6ncc");
-    			attr_dev(input1, "placeholder", "Enter second word");
-    			add_location(input1, file, 98, 6, 2619);
-    			attr_dev(input2, "class", "word-input svelte-qp6ncc");
-    			attr_dev(input2, "placeholder", "Enter third word");
-    			add_location(input2, file, 99, 6, 2707);
-    			attr_dev(div0, "class", "input-container svelte-qp6ncc");
-    			add_location(div0, file, 96, 5, 2496);
-    			add_location(br, file, 101, 26, 2825);
-    			attr_dev(i, "class", "svelte-qp6ncc");
-    			add_location(i, file, 101, 30, 2829);
-    			attr_dev(h2, "class", "svelte-qp6ncc");
-    			add_location(h2, file, 101, 3, 2802);
-    			attr_dev(div1, "class", "glass svelte-qp6ncc");
-    			add_location(div1, file, 95, 4, 2471);
-    			attr_dev(div2, "class", "card svelte-qp6ncc");
-    			add_location(div2, file, 90, 2, 2274);
+    			attr_dev(input0, "type", "text");
+    			attr_dev(input0, "id", "email");
+    			attr_dev(input0, "class", "form__input svelte-jpax2m");
+    			attr_dev(input0, "autocomplete", "off");
+    			attr_dev(input0, "placeholder", " ");
+    			add_location(input0, file, 98, 6, 2556);
+    			attr_dev(label0, "for", "email");
+    			attr_dev(label0, "class", "form__label svelte-jpax2m");
+    			add_location(label0, file, 99, 6, 2648);
+    			attr_dev(div0, "class", "form svelte-jpax2m");
+    			add_location(div0, file, 97, 5, 2531);
+    			attr_dev(input1, "type", "text");
+    			attr_dev(input1, "id", "email");
+    			attr_dev(input1, "class", "form__input svelte-jpax2m");
+    			attr_dev(input1, "autocomplete", "off");
+    			attr_dev(input1, "placeholder", " ");
+    			add_location(input1, file, 102, 6, 2748);
+    			attr_dev(label1, "for", "email");
+    			attr_dev(label1, "class", "form__label svelte-jpax2m");
+    			add_location(label1, file, 103, 6, 2840);
+    			attr_dev(div1, "class", "form svelte-jpax2m");
+    			add_location(div1, file, 101, 5, 2723);
+    			attr_dev(input2, "type", "text");
+    			attr_dev(input2, "id", "email");
+    			attr_dev(input2, "class", "form__input svelte-jpax2m");
+    			attr_dev(input2, "autocomplete", "off");
+    			attr_dev(input2, "placeholder", " ");
+    			add_location(input2, file, 106, 6, 2941);
+    			attr_dev(label2, "for", "email");
+    			attr_dev(label2, "class", "form__label svelte-jpax2m");
+    			add_location(label2, file, 107, 6, 3033);
+    			attr_dev(div2, "class", "form svelte-jpax2m");
+    			add_location(div2, file, 105, 5, 2916);
+    			attr_dev(div3, "class", "input-container svelte-jpax2m");
+    			add_location(div3, file, 96, 5, 2496);
+    			add_location(br, file, 110, 22, 3136);
+    			attr_dev(i, "class", "svelte-jpax2m");
+    			add_location(i, file, 110, 26, 3140);
+    			attr_dev(h2, "class", "svelte-jpax2m");
+    			add_location(h2, file, 110, 3, 3117);
+    			attr_dev(div4, "class", "glass svelte-jpax2m");
+    			add_location(div4, file, 95, 4, 2471);
+    			attr_dev(div5, "class", "card svelte-jpax2m");
+    			add_location(div5, file, 90, 2, 2274);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, span0);
-    			append_dev(div2, t0);
-    			append_dev(div2, span1);
-    			append_dev(div2, t1);
-    			append_dev(div2, span2);
-    			append_dev(div2, t2);
-    			append_dev(div2, span3);
-    			append_dev(div2, t3);
-    			append_dev(div2, div1);
-    			append_dev(div1, div0);
+    			insert_dev(target, div5, anchor);
+    			append_dev(div5, span0);
+    			append_dev(div5, t0);
+    			append_dev(div5, span1);
+    			append_dev(div5, t1);
+    			append_dev(div5, span2);
+    			append_dev(div5, t2);
+    			append_dev(div5, span3);
+    			append_dev(div5, t3);
+    			append_dev(div5, div4);
+    			append_dev(div4, div3);
+    			append_dev(div3, div0);
     			append_dev(div0, input0);
-    			set_input_value(input0, /*firstWord*/ ctx[2]);
     			append_dev(div0, t4);
-    			append_dev(div0, input1);
-    			set_input_value(input1, /*firstWord*/ ctx[2]);
-    			append_dev(div0, t5);
-    			append_dev(div0, input2);
-    			set_input_value(input2, /*firstWord*/ ctx[2]);
-    			append_dev(div1, t6);
-    			append_dev(div1, h2);
-    			append_dev(h2, t7);
+    			append_dev(div0, label0);
+    			append_dev(div3, t6);
+    			append_dev(div3, div1);
+    			append_dev(div1, input1);
+    			append_dev(div1, t7);
+    			append_dev(div1, label1);
+    			append_dev(div3, t9);
+    			append_dev(div3, div2);
+    			append_dev(div2, input2);
+    			append_dev(div2, t10);
+    			append_dev(div2, label2);
+    			append_dev(div4, t12);
+    			append_dev(div4, h2);
+    			append_dev(h2, t13);
     			append_dev(h2, br);
     			append_dev(h2, i);
     			current = true;
-
-    			if (!mounted) {
-    				dispose = [
-    					listen_dev(input0, "input", /*input0_input_handler*/ ctx[5]),
-    					listen_dev(input1, "input", /*input1_input_handler*/ ctx[6]),
-    					listen_dev(input2, "input", /*input2_input_handler*/ ctx[7])
-    				];
-
-    				mounted = true;
-    			}
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*firstWord*/ 4 && input0.value !== /*firstWord*/ ctx[2]) {
-    				set_input_value(input0, /*firstWord*/ ctx[2]);
-    			}
-
-    			if (dirty & /*firstWord*/ 4 && input1.value !== /*firstWord*/ ctx[2]) {
-    				set_input_value(input1, /*firstWord*/ ctx[2]);
-    			}
-
-    			if (dirty & /*firstWord*/ 4 && input2.value !== /*firstWord*/ ctx[2]) {
-    				set_input_value(input2, /*firstWord*/ ctx[2]);
-    			}
     		},
     		i: function intro(local) {
     			if (current) return;
 
     			add_render_callback(() => {
-    				if (!div2_transition) div2_transition = create_bidirectional_transition(div2, fly, { y: 200, duration: 2000 }, true);
-    				div2_transition.run(1);
+    				if (!div5_transition) div5_transition = create_bidirectional_transition(div5, fly, { y: 200, duration: 2000 }, true);
+    				div5_transition.run(1);
     			});
 
     			current = true;
     		},
     		o: function outro(local) {
-    			if (!div2_transition) div2_transition = create_bidirectional_transition(div2, fly, { y: 200, duration: 2000 }, false);
-    			div2_transition.run(0);
+    			if (!div5_transition) div5_transition = create_bidirectional_transition(div5, fly, { y: 200, duration: 2000 }, false);
+    			div5_transition.run(0);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
-    			if (detaching && div2_transition) div2_transition.end();
-    			mounted = false;
-    			run_all(dispose);
+    			if (detaching) detach_dev(div5);
+    			if (detaching && div5_transition) div5_transition.end();
     		}
     	};
 
@@ -24377,11 +24398,16 @@ var app = (function () {
     	let section2;
     	let h11;
     	let t12;
+    	let div2;
+    	let input;
+    	let t13;
+    	let label;
+    	let t15;
     	let section3;
     	let current;
     	let mounted;
     	let dispose;
-    	add_render_callback(/*onwindowscroll*/ ctx[4]);
+    	add_render_callback(/*onwindowscroll*/ ctx[3]);
 
     	function select_block_type(ctx, dirty) {
     		if (!/*lang*/ ctx[1].spanish) return create_if_block_2;
@@ -24442,23 +24468,29 @@ var app = (function () {
     			h11 = element("h1");
     			h11.textContent = "Section 3";
     			t12 = space();
+    			div2 = element("div");
+    			input = element("input");
+    			t13 = space();
+    			label = element("label");
+    			label.textContent = "First Word";
+    			t15 = space();
     			section3 = element("section");
     			section3.textContent = "Section 4";
-    			attr_dev(li0, "class", "svelte-qp6ncc");
+    			attr_dev(li0, "class", "svelte-jpax2m");
     			add_location(li0, file, 25, 5, 529);
-    			attr_dev(li1, "class", "svelte-qp6ncc");
+    			attr_dev(li1, "class", "svelte-jpax2m");
     			add_location(li1, file, 28, 5, 571);
-    			attr_dev(ul, "class", "svelte-qp6ncc");
+    			attr_dev(ul, "class", "svelte-jpax2m");
     			add_location(ul, file, 24, 4, 519);
-    			attr_dev(nav, "class", "svelte-qp6ncc");
+    			attr_dev(nav, "class", "svelte-jpax2m");
     			add_location(nav, file, 23, 3, 509);
     			add_location(header, file, 22, 2, 497);
-    			attr_dev(p, "class", "svelte-qp6ncc");
+    			attr_dev(p, "class", "svelte-jpax2m");
     			add_location(p, file, 58, 4, 968);
     			add_location(h10, file, 57, 3, 959);
-    			attr_dev(div0, "class", "introduction svelte-qp6ncc");
+    			attr_dev(div0, "class", "introduction svelte-jpax2m");
     			add_location(div0, file, 56, 2, 929);
-    			attr_dev(section0, "class", "intro svelte-qp6ncc");
+    			attr_dev(section0, "class", "intro svelte-jpax2m");
     			add_location(section0, file, 21, 2, 471);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "x", "50%");
@@ -24477,34 +24509,45 @@ var app = (function () {
     			add_location(text2, file, 78, 5, 1872);
     			attr_dev(symbol, "id", "s-text");
     			add_location(symbol, file, 75, 4, 1703);
-    			attr_dev(use0, "class", "text svelte-qp6ncc");
+    			attr_dev(use0, "class", "text svelte-jpax2m");
     			xlink_attr(use0, "xlink:href", "#s-text");
     			add_location(use0, file, 81, 4, 1986);
-    			attr_dev(use1, "class", "text svelte-qp6ncc");
+    			attr_dev(use1, "class", "text svelte-jpax2m");
     			xlink_attr(use1, "xlink:href", "#s-text");
     			add_location(use1, file, 82, 4, 2036);
-    			attr_dev(use2, "class", "text svelte-qp6ncc");
+    			attr_dev(use2, "class", "text svelte-jpax2m");
     			xlink_attr(use2, "xlink:href", "#s-text");
     			add_location(use2, file, 83, 4, 2086);
-    			attr_dev(use3, "class", "text svelte-qp6ncc");
+    			attr_dev(use3, "class", "text svelte-jpax2m");
     			xlink_attr(use3, "xlink:href", "#s-text");
     			add_location(use3, file, 84, 4, 2136);
-    			attr_dev(use4, "class", "text svelte-qp6ncc");
+    			attr_dev(use4, "class", "text svelte-jpax2m");
     			xlink_attr(use4, "xlink:href", "#s-text");
     			add_location(use4, file, 85, 4, 2186);
     			attr_dev(svg, "viewBox", "0 0 600 300");
-    			attr_dev(svg, "class", "svelte-qp6ncc");
+    			attr_dev(svg, "class", "svelte-jpax2m");
     			add_location(svg, file, 73, 3, 1652);
-    			attr_dev(div1, "class", "animated-text svelte-qp6ncc");
+    			attr_dev(div1, "class", "animated-text svelte-jpax2m");
     			add_location(div1, file, 72, 2, 1621);
-    			attr_dev(section1, "class", "info svelte-qp6ncc");
+    			attr_dev(section1, "class", "info svelte-jpax2m");
     			add_location(section1, file, 70, 2, 1595);
-    			add_location(h11, file, 112, 2, 2928);
-    			attr_dev(section2, "class", "card-section svelte-qp6ncc");
-    			add_location(section2, file, 110, 2, 2894);
-    			attr_dev(section3, "class", "svelte-qp6ncc");
-    			add_location(section3, file, 117, 1, 2963);
-    			attr_dev(main, "class", "svelte-qp6ncc");
+    			add_location(h11, file, 121, 2, 3257);
+    			attr_dev(input, "type", "text");
+    			attr_dev(input, "id", "email");
+    			attr_dev(input, "class", "form__input svelte-jpax2m");
+    			attr_dev(input, "autocomplete", "off");
+    			attr_dev(input, "placeholder", " ");
+    			add_location(input, file, 124, 3, 3301);
+    			attr_dev(label, "for", "email");
+    			attr_dev(label, "class", "form__label svelte-jpax2m");
+    			add_location(label, file, 125, 3, 3390);
+    			attr_dev(div2, "class", "form svelte-jpax2m");
+    			add_location(div2, file, 123, 2, 3279);
+    			attr_dev(section2, "class", "card-section svelte-jpax2m");
+    			add_location(section2, file, 119, 2, 3223);
+    			attr_dev(section3, "class", "svelte-jpax2m");
+    			add_location(section3, file, 130, 1, 3472);
+    			attr_dev(main, "class", "svelte-jpax2m");
     			add_location(main, file, 20, 0, 462);
     		},
     		l: function claim(nodes) {
@@ -24547,7 +24590,12 @@ var app = (function () {
     			append_dev(main, t10);
     			append_dev(main, section2);
     			append_dev(section2, h11);
-    			append_dev(main, t12);
+    			append_dev(section2, t12);
+    			append_dev(section2, div2);
+    			append_dev(div2, input);
+    			append_dev(div2, t13);
+    			append_dev(div2, label);
+    			append_dev(main, t15);
     			append_dev(main, section3);
     			current = true;
 
@@ -24556,7 +24604,7 @@ var app = (function () {
     					scrolling = true;
     					clearTimeout(scrolling_timeout);
     					scrolling_timeout = setTimeout(clear_scrolling, 100);
-    					/*onwindowscroll*/ ctx[4]();
+    					/*onwindowscroll*/ ctx[3]();
     				});
 
     				mounted = true;
@@ -24594,8 +24642,6 @@ var app = (function () {
 
     			if (/*scroll*/ ctx[0] > 700) {
     				if (if_block2) {
-    					if_block2.p(ctx, dirty);
-
     					if (dirty & /*scroll*/ 1) {
     						transition_in(if_block2, 1);
     					}
@@ -24670,21 +24716,6 @@ var app = (function () {
     		$$invalidate(0, scroll = window.pageYOffset);
     	}
 
-    	function input0_input_handler() {
-    		firstWord = this.value;
-    		$$invalidate(2, firstWord);
-    	}
-
-    	function input1_input_handler() {
-    		firstWord = this.value;
-    		$$invalidate(2, firstWord);
-    	}
-
-    	function input2_input_handler() {
-    		firstWord = this.value;
-    		$$invalidate(2, firstWord);
-    	}
-
     	$$self.$capture_state = () => ({
     		Greeter,
     		ethers,
@@ -24699,23 +24730,14 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('scroll' in $$props) $$invalidate(0, scroll = $$props.scroll);
     		if ('lang' in $$props) $$invalidate(1, lang = $$props.lang);
-    		if ('firstWord' in $$props) $$invalidate(2, firstWord = $$props.firstWord);
+    		if ('firstWord' in $$props) firstWord = $$props.firstWord;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [
-    		scroll,
-    		lang,
-    		firstWord,
-    		toggle,
-    		onwindowscroll,
-    		input0_input_handler,
-    		input1_input_handler,
-    		input2_input_handler
-    	];
+    	return [scroll, lang, toggle, onwindowscroll];
     }
 
     class App extends SvelteComponentDev {
